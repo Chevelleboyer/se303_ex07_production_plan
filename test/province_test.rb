@@ -78,4 +78,13 @@ class ProvinceTest < Minitest::Test
 	end
   end
 
+  def test_shortfall_with_string_for_producers
+  	# I have no idea if this test is even testing the right thing..
+  	# Should maybe have edited Province class to properly handle a string for producers
+  	assert_raises NoMethodError do
+	  asia = Province.new(sample_province_data_string_producers)
+	  assert_equal(0, asia.shortfall)
+	end
+  end
+
 end
