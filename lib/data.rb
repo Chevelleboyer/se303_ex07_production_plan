@@ -21,3 +21,12 @@ def sample_province_data_no_producers
     price: 20
   }
 end
+
+def sample_province_data_string_producers
+    {
+    name: 'Asia',
+    producers: "",
+    demand: 30,
+    price: 20
+  }
+end
