@@ -70,4 +70,12 @@ class ProvinceTest < Minitest::Test
 	end
   end
 
+  def test_profit_with_empty_string_demand
+  	assert_raises ArgumentError do
+  	  asia = Province.new(sample_province_data)
+  	  asia.demand = ""
+  	  asia.profit
+	end
+  end
+
 end
